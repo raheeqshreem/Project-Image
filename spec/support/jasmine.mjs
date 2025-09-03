@@ -1,0 +1,9 @@
+export default {
+  spec_dir: "spec",
+  spec_files: ["*/[sS]pec.ts"],
+  helpers: ["../node_modules/ts-node/register/index.js"],
+  env: {
+    stopSpecOnExpectationFailure: false,
+    random: false
+  }
+};
