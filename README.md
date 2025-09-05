@@ -1,13 +1,11 @@
-# Image Resizer API (TypeScript)
+# Image Resize API (TypeScript)
 
-## Scripts
-- Dev: npm run dev
-- Build: npm run build
-- Start: npm start
-- Test: npm test
-- Lint: npm run lint
-- Format: npm run format
+Two modes:
+1) *On-demand*: POST /api/on-demand with form-data: image (file), width, height → returns resized image (not saved).
+2) *Cached*: GET /api/images?filename=<name>.jpg&width=200&height=200 → returns cached image if exists, otherwise resizes, stores to /thumbs, then returns it.
 
-## Endpoints
-- POST /api/resize (form-data: image, width/height) — returns resized image without saving.
-- GET /api/image?name=sample.jpg&width=300&height=300&fit=contain — serves from folder with caching.
+## Run
+```bash
+npm install
+npm run build
+npm start
